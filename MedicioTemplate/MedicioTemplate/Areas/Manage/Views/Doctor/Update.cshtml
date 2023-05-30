@@ -1,0 +1,38 @@
+﻿@using MedicioTemplate.Models;
+@model Doctor
+<div class="content-wrapper">
+    <div class="row">
+
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Update Doctor</h4>
+                    <p class="card-description">
+                        Update Doctor
+                    </p>
+                    <form class="forms-sample" enctype="multipart/form-data" method="post">
+                        <div class="form-group">
+                            <label asp-for="Fullname">Fullname</label>
+                            <input asp-for="Fullname" class="form-control" placeholder="Fullname">
+                            <span asp-validation-for="Fullname" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Profession">Profession</label>
+                            <input asp-for="Profession" class="form-control" placeholder="SubProfessiontitle">
+                            <span asp-validation-for="Profession" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Photo">Photo</label>
+                            <input asp-for="Photo" class="form-control" placeholder="Photo">
+                            <span asp-validation-for="Photo" class="text-danger"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary me-2">Submit</button>
+                        <a asp-action="index" asp-controller="doctor" class="btn btn-light">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
